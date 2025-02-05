@@ -27,3 +27,10 @@ CREATE TABLE boldvector (
 CREATE UNIQUE INDEX boldvector_pkey ON boldvector(processid text_ops);
 CREATE INDEX boldvector_coord_idx ON boldvector USING GIST (coord gist_geometry_ops_2d);
 ```
+
+## Converting data
+
+
+## Uploading data
+
+Doing it directly using Postgres using small batches, e.g. 1000.

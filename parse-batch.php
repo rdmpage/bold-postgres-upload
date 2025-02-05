@@ -41,8 +41,10 @@ $file_name_size = 8;
 $upload = true;
 //$upload = false;
 
-$batchsize  =     10; 
-$batchsize  = 100000;
+$batchsize  =      10; 
+$batchsize  =    1000;  // 1K
+//$batchsize  =   10000; // 10K
+//$batchsize  =  100000; // 100K
 
 $batch = array();
 $row_startTime = microtime(true);
@@ -301,15 +303,12 @@ while (!feof($file_handle))
 	
 			// print_r($batch);
 			
+			$sql = 'INSERT INTO boldvector (' . join(',', $keys) . ') VALUES' . "\n";
+			$sql .= join(",\n", $batch);
+			$sql .= " ON CONFLICT DO NOTHING;";
+				
 			if ($upload)
 			{
-				$sql = 'INSERT INTO boldvector (' . join(',', $keys) . ') VALUES' . "\n";
-				$sql .= join(",\n", $batch);
-				$sql .= " ON CONFLICT DO NOTHING;";
-				
-				// $batch_filename = str_pad($row_count, $file_name_size, '0', STR_PAD_LEFT) . '.sql';
-				//file_put_contents($batch_filename, $sql);	
-				
 				$startTime = microtime(true);
 		
 				echo "Uploading " . count($batch) . " rows to psql\n";
@@ -320,6 +319,11 @@ while (!feof($file_handle))
 				$executionTime = $endTime - $startTime;
 				$formattedTime = number_format($executionTime, 3, '.', '');
 				echo "Execution time: " . $formattedTime . " seconds\n\n";
+			}
+			else
+			{
+				$batch_filename = str_pad($row_count, $file_name_size, '0', STR_PAD_LEFT) . '.sql';
+				file_put_contents($batch_filename, $sql);					
 			}
 			
 			$batch = array();
@@ -347,15 +351,12 @@ if (count($batch) > 0)
 
 	// print_r($batch);
 	
+	$sql = 'INSERT INTO boldvector (' . join(',', $keys) . ') VALUES' . "\n";
+	$sql .= join(",\n", $batch);
+	$sql .= " ON CONFLICT DO NOTHING;";
+
 	if ($upload)
 	{
-		$sql = 'INSERT INTO boldvector (' . join(',', $keys) . ') VALUES' . "\n";
-		$sql .= join(",\n", $batch);
-		$sql .= " ON CONFLICT DO NOTHING;";
-		
-		// $batch_filename = str_pad($row_count, $file_name_size, '0', STR_PAD_LEFT) . '.sql';
-		//file_put_contents($batch_filename, $sql);	
-		
 		$startTime = microtime(true);
 
 		echo "Uploading " . count($batch) . " rows to psql\n";
@@ -366,8 +367,11 @@ if (count($batch) > 0)
 		$executionTime = $endTime - $startTime;
 		$formattedTime = number_format($executionTime, 3, '.', '');
 		echo "Execution time: " . $formattedTime . " seconds\n\n";
-		
-		
+	}
+	else
+	{
+		$batch_filename = str_pad($row_count, $file_name_size, '0', STR_PAD_LEFT) . '.sql';
+		file_put_contents($batch_filename, $sql);	
 	}
 	
 	$batch = array();
