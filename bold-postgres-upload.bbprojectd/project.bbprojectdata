@@ -9,6 +9,7 @@
 		<string>C873E122-8812-4EED-ACA6-7A69BEECC3F9</string>
 		<string>BAF4F37C-4B8E-4397-A014-C02C08B1B202</string>
 		<string>7F6548AB-017F-40BE-B8BA-FC1374528507</string>
+		<string>CCB8D6B0-03D0-440B-B644-E4DB57A2F19D</string>
 		<string>DC48EE62-DEB3-43A2-865F-003A85DC05D9</string>
 		<string>9D6246B1-2261-4B9C-A564-533B95F9B594</string>
 	</array>
@@ -299,6 +300,55 @@
 			<string>env.php</string>
 			<key>ItemType</key>
 			<string>FileReference</string>
+		</dict>
+		<key>CCB8D6B0-03D0-440B-B644-E4DB57A2F19D</key>
+		<dict>
+			<key>ItemData</key>
+			<dict>
+				<key>BookmarkData</key>
+				<data>
+				Ym9va/wCAAAAAAQQMAAAADclk5atxhd3Vl5fDO6FY5MO
+				M4DMrOr6he270mfS6tXH+AEAAAQAAAADAwAAAAgAKAUA
+				AAABAQAAVXNlcnMAAAAFAAAAAQEAAHJwYWdlAAAACwAA
+				AAEBAABEZXZlbG9wbWVudAAUAAAAAQEAAGJvbGQtcG9z
+				dGdyZXMtdXBsb2FkGAAAAAEBAABwYXJzZS1iYXRjaC1t
+				ZXRhZGF0YS5waHAUAAAAAQYAABAAAAAgAAAAMAAAAEQA
+				AABgAAAACAAAAAQDAAB9QgAAAAAAAAgAAAAEAwAAKX4A
+				AAAAAAAIAAAABAMAAOidDAAAAAAACAAAAAQDAAAI1ngA
+				AAAAAAgAAAAEAwAA+mh7AAAAAAAUAAAAAQYAAJwAAACs
+				AAAAvAAAAMwAAADcAAAACAAAAAAEAABBxpDdniwOQxgA
+				AAABAgAAAQAAAAAAAAAPAAAAAAAAAAAAAAAAAAAACAAA
+				AAQDAAADAAAAAAAAAAQAAAADAwAA9QEAAAgAAAABCQAA
+				ZmlsZTovLy8MAAAAAQEAAE1hY2ludG9zaCBIRAgAAAAE
+				AwAAAJCClucAAAAIAAAAAAQAAEHGX0QCgAAAJAAAAAEB
+				AAAzRkI5REQ4NS00OThCLTRDMkQtODhGMC1DMDYzNzI4
+				MEI4QkUYAAAAAQIAAIEAAAABAAAA7xMAAAEAAAAAAAAA
+				AAAAAAEAAAABAQAALwAAAAAAAAABBQAAzAAAAP7///8B
+				AAAAAAAAABAAAAAEEAAAgAAAAAAAAAAFEAAA7AAAAAAA
+				AAAQEAAAGAEAAAAAAABAEAAACAEAAAAAAAACIAAA5AEA
+				AAAAAAAFIAAAVAEAAAAAAAAQIAAAZAEAAAAAAAARIAAA
+				mAEAAAAAAAASIAAAeAEAAAAAAAATIAAAiAEAAAAAAAAg
+				IAAAxAEAAAAAAAAwIAAA8AEAAAAAAAABwAAAOAEAAAAA
+				AAARwAAAIAAAAAAAAAASwAAASAEAAAAAAAAQ0AAABAAA
+				AAAAAAA=
+				</data>
+				<key>FileURL</key>
+				<string>file:///Users/rpage/Development/bold-postgres-upload/parse-batch-metadata.php</string>
+				<key>HasSecurityScope</key>
+				<true/>
+				<key>RelativePath</key>
+				<string>./parse-batch-metadata.php</string>
+				<key>TypeID</key>
+				<string>_CFileLocator</string>
+				<key>Version</key>
+				<integer>1</integer>
+			</dict>
+			<key>ItemName</key>
+			<string>parse-batch-metadata.php</string>
+			<key>ItemType</key>
+			<string>FileReference</string>
+			<key>UserOverrideItemName</key>
+			<true/>
 		</dict>
 		<key>DC48EE62-DEB3-43A2-865F-003A85DC05D9</key>
 		<dict>
