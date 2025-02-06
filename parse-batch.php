@@ -337,6 +337,11 @@ while (!feof($file_handle))
 	}	
 	
 	$row_count++;
+	
+	if ($row_count % 1000 == 0)
+	{
+		echo "[$row_count]\n";
+	}
 }	
 
 // left over?
