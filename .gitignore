@@ -3,3 +3,6 @@ env.php
 .DS_Store
 BOLD_Public.06-Sep-2024/BOLD_Public.06-Sep-2024.datapackage.json
 BOLD_Public.06-Sep-2024/BOLD_Public.06-Sep-2024.tsv
+
+/data/
+/ibol_2024_07_19/
