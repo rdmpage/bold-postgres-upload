@@ -19,7 +19,7 @@ $row_count = 0;
 
 $batchsize  =      10; 
 $batchsize  =    1000;  // 1K
-$batchsize  =   10000;  // 10K
+//$batchsize  =   10000;  // 10K
 
 $batch = array();
 $row_startTime = microtime(true);
@@ -95,10 +95,6 @@ while (!feof($file_handle))
 				{
 					$values[] = "'" . str_replace("'", "''", json_encode($v)) . "'";
 				}
-				elseif (preg_match('/^POINT/', $v))
-				{
-					$values[] = "ST_GeomFromText('" . $v . "', 4326)";
-				}
 				else
 				{				
 					$values[] = "'" . str_replace("'", "''", $v) . "'";
@@ -141,7 +137,7 @@ while (!feof($file_handle))
 		
 		$batch = array();
 		
-		//if ($row_count > 100)
+		if ($row_count > 100)
 		{
 			//exit(); // just do a million
 		}
