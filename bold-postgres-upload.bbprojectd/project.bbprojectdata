@@ -10,6 +10,7 @@
 		<string>BAF4F37C-4B8E-4397-A014-C02C08B1B202</string>
 		<string>7F6548AB-017F-40BE-B8BA-FC1374528507</string>
 		<string>CCB8D6B0-03D0-440B-B644-E4DB57A2F19D</string>
+		<string>86CE889F-2CDB-49B3-A057-B061805DE80E</string>
 		<string>DC48EE62-DEB3-43A2-865F-003A85DC05D9</string>
 		<string>9D6246B1-2261-4B9C-A564-533B95F9B594</string>
 	</array>
@@ -110,6 +111,55 @@
 			<string>parse-batch.php</string>
 			<key>ItemType</key>
 			<string>FileReference</string>
+		</dict>
+		<key>86CE889F-2CDB-49B3-A057-B061805DE80E</key>
+		<dict>
+			<key>ItemData</key>
+			<dict>
+				<key>BookmarkData</key>
+				<data>
+				Ym9va/wCAAAAAAQQMAAAANhcz3XKxnugbR7RolilF2X1
+				8wtXirpVhzr7YNAnW+ee+AEAAAQAAAADAwAAAAgAKAUA
+				AAABAQAAVXNlcnMAAAAFAAAAAQEAAHJwYWdlAAAACwAA
+				AAEBAABEZXZlbG9wbWVudAAUAAAAAQEAAGJvbGQtcG9z
+				dGdyZXMtdXBsb2FkFQAAAAEBAABwYXJzZS1nYmlmLWlt
+				YWdlcy5waHAAAAAUAAAAAQYAABAAAAAgAAAAMAAAAEQA
+				AABgAAAACAAAAAQDAAB9QgAAAAAAAAgAAAAEAwAAKX4A
+				AAAAAAAIAAAABAMAAOidDAAAAAAACAAAAAQDAAAI1ngA
+				AAAAAAgAAAAEAwAArYl7AAAAAAAUAAAAAQYAAJwAAACs
+				AAAAvAAAAMwAAADcAAAACAAAAAAEAABBxpt16pmZmhgA
+				AAABAgAAAQAAAAAAAAAPAAAAAAAAAAAAAAAAAAAACAAA
+				AAQDAAADAAAAAAAAAAQAAAADAwAA9QEAAAgAAAABCQAA
+				ZmlsZTovLy8MAAAAAQEAAE1hY2ludG9zaCBIRAgAAAAE
+				AwAAAJCClucAAAAIAAAAAAQAAEHGX0QCgAAAJAAAAAEB
+				AAAzRkI5REQ4NS00OThCLTRDMkQtODhGMC1DMDYzNzI4
+				MEI4QkUYAAAAAQIAAIEAAAABAAAA7xMAAAEAAAAAAAAA
+				AAAAAAEAAAABAQAALwAAAAAAAAABBQAAzAAAAP7///8B
+				AAAAAAAAABAAAAAEEAAAgAAAAAAAAAAFEAAA7AAAAAAA
+				AAAQEAAAGAEAAAAAAABAEAAACAEAAAAAAAACIAAA5AEA
+				AAAAAAAFIAAAVAEAAAAAAAAQIAAAZAEAAAAAAAARIAAA
+				mAEAAAAAAAASIAAAeAEAAAAAAAATIAAAiAEAAAAAAAAg
+				IAAAxAEAAAAAAAAwIAAA8AEAAAAAAAABwAAAOAEAAAAA
+				AAARwAAAIAAAAAAAAAASwAAASAEAAAAAAAAQ0AAABAAA
+				AAAAAAA=
+				</data>
+				<key>FileURL</key>
+				<string>file:///Users/rpage/Development/bold-postgres-upload/parse-gbif-images.php</string>
+				<key>HasSecurityScope</key>
+				<true/>
+				<key>RelativePath</key>
+				<string>./parse-gbif-images.php</string>
+				<key>TypeID</key>
+				<string>_CFileLocator</string>
+				<key>Version</key>
+				<integer>1</integer>
+			</dict>
+			<key>ItemName</key>
+			<string>parse-gbif-images.php</string>
+			<key>ItemType</key>
+			<string>FileReference</string>
+			<key>UserOverrideItemName</key>
+			<true/>
 		</dict>
 		<key>89DE4E91-746B-4D09-AB90-1D315F72CD2F</key>
 		<dict>
