@@ -163,7 +163,7 @@ while (!feof($file_handle))
 			{
 				$keys[] = '"' . $k . '"'; // must be double quotes
 				
-				if (!$v)
+				if (is_null($v))
 				{
 					$values[] = 'NULL';
 				}
