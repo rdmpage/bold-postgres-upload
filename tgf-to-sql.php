@@ -2,6 +2,7 @@
 
 // Read a TGF file and export SQL
 
+require_once (dirname(__FILE__) . '/pg.php');
 require_once (dirname(__FILE__) . '/n-tree.php');
 
 //----------------------------------------------------------------------------------------
@@ -9,12 +10,21 @@ function tgf_to_tree($filename)
 {
 	$t = null;
 	
+	$startTime = microtime(true);
+	
 	echo "-- getting tree\n";
 	$reader = new ReadTreeTGF($filename);
+	
+	
 	
 	if ($reader->Read())
 	{		
 		$t = $reader->GetTree();
+		
+		$endTime = microtime(true);
+		$executionTime = $endTime - $startTime;
+		$formattedTime = number_format($executionTime, 3, '.', '');
+		echo "Execution time: " . $formattedTime . " seconds\n\n";		
 		
 		if (0)
 		{
@@ -97,14 +107,17 @@ function tgf_to_tree($filename)
 //----------------------------------------------------------------------------------------
 function tree_to_sql(&$t)
 {
+	global $db;
+
 	$batchsize  =    1000;  // 1K
-	$batchsize  =      10;
+	//$batchsize  =      10;
+	
 	$batch = array();
 	$row_startTime = microtime(true);
 	
 	$row_count = 0;
 	
-	$tablename = 'boldtree';
+	$tablename = 'boldtaxonomy';
 
 	$n = new NodeIterator($t->GetRoot());
 	$q = $n->Begin();
@@ -205,10 +218,7 @@ function tree_to_sql(&$t)
 		
 				echo "Uploading " . count($batch) . " rows to psql\n";
 				
-				//$result = pg_query($db, $sql);
-				
-				echo $sql;
-				exit();
+				$result = pg_query($db, $sql);
 		
 				$endTime = microtime(true);
 				$executionTime = $endTime - $startTime;
