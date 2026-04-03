@@ -30,6 +30,20 @@ $headings = array(
 'taxonRemarks'
 );
 
+// taxonomy						
+$taxon_keys = array(
+	"kingdom" 		=> "k__",
+	"phylum"		=> "p__",
+	"class" 		=> "c__",
+	"order" 		=> "o__",
+	"family" 		=> "f__",
+	"subfamily" 	=> "sf__",
+	"tribe" 		=> "t__",
+	"genus" 		=> "g__",
+	"species" 		=> "s__",
+	"subspecies"	=> "ss__",
+);
+
 // Latin32 to encode BIN numbers
 $b = new BaseConverter("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ");
 
@@ -112,11 +126,20 @@ while (!feof($file_handle))
 		if (preg_match('/^[0-9]+$/', $data->taxonID))
 		{
 			$node_index = $data->taxonID;
-			$nodes[$node_index] = $data->taxonID . '|' . $data->scientificName;
+			
+			$node_name = $data->taxonID . '|';
+			
+			if (isset($data->taxonRank) && isset($taxon_keys[$data->taxonRank]))
+			{
+				$node_name .= $taxon_keys[$data->taxonRank];
+			}
+			$node_name .= $data->scientificName;
+			
+			$nodes[$node_index] = $node_name;
 		}
 		elseif (preg_match('/^BOLD:(.*)/', $data->taxonID, $m))
 		{
-			// strip prefox from BIN and convert to integer
+			// strip prefix from BIN and convert to integer
 			$bin_no_prefix = $m[1];
 			$node_index = $b->decode($bin_no_prefix);
 			
